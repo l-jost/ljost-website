@@ -1,6 +1,5 @@
-//
-// Place any custom JS here
-//
+/// Main JS file
+/// Author: Luca Jost
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
