@@ -4,6 +4,8 @@
 
 body {
   padding-bottom: 20px;
+  background-color: #131316;
+  color : #c2c2c2;
 }
 
 header {
@@ -34,4 +36,19 @@ footer {
   text-align: center;
   font-size: 16px;
   color: #999;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
 }
