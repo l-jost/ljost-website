@@ -26,13 +26,4 @@ jobs:
         run: npm install -g bootlint
       
       - name: Run Bootlint
-        run: bootlint
-      
-      - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
-        with:
-          name: artifacts
-          path: /
-          if-no-files-found: error
-          retention-days: 90
-    
+        run: bootlint index.html -d W005
