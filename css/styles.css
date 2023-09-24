@@ -7,9 +7,11 @@ body {
 }
 
 header {
-  background-color: #5c5c5c;
+  background-image: url("../images/space.jpg");
+  background-size: cover;
+  background-position: bottom;
   color: #fff;
-  padding: 50px;
+  padding: 100px;
   text-align: center;
 }
 
@@ -21,4 +23,15 @@ footer {
   background-color: #000;
   color: #fff;
   padding: 20px;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+
+.image-desc {
+  text-align: center;
+  font-size: 16px;
+  color: #999;
 }
