@@ -1,0 +1,21 @@
+{
+  "name": "portfolio",
+  "description": "Engineering portfolio",
+  "version": "0.1.0",
+  "private": false,
+  "repository": "l-jost/ljost-website",
+  "license": "LGPL-3.0-or-later",
+  "stackblitz": {
+    "startCommand": "npm start"
+  },
+  "scripts": {
+    "start": "sirv --dev --no-clear --port 3000"
+  },
+  "devDependencies": {
+    "sirv-cli": "^2.0.2"
+  },
+  "dependencies": {
+    "bootlint": "^1.1.0",
+    "bootstrap": "^5.3.2"
+  }
+}

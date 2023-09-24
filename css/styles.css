@@ -1,0 +1,24 @@
+/*
+ * Custom CSS
+ */
+
+body {
+  padding-bottom: 20px;
+}
+
+header {
+  background-color: #5c5c5c;
+  color: #fff;
+  padding: 50px;
+  text-align: center;
+}
+
+main {
+  padding: 40px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
