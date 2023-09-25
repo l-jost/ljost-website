@@ -13,7 +13,7 @@ header {
   background-size: cover;
   background-position: bottom;
   color: #fff;
-  padding: 100px;
+  padding: 130px;
   text-align: center;
 }
 
@@ -51,4 +51,16 @@ footer {
 
 .show {
   opacity: 1;
+}
+
+.cursor {
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  opacity: 0.05;
+  border-radius: 100%;
+  background: radial-gradient(circle, #fff, transparent 50%);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.15s, height 0.15s, opacity 0.15s;
 }
