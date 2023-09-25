@@ -27,40 +27,95 @@
       <section class="hidden">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-6">
-            <h2>Project 1</h2>
-            <h4>Subtitle</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-              esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt 
-              in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <img class="image" src="images/placeholder.jpg" alt="placeholder image">
-            <p class="image-desc">Placeholder image</p>
-          </div>
+            <h2><a href="https://catsystems.io">Sounding Rocket Flight Computers</a></h2>
+            <h4>Personal Company Project - 2020-2023</h4>
+            <p>To recovery model rockets, a parachute needs to be
+              ejected at the correct time. For this to happen a flight
+              computer is needed to continuously read out altitude
+              data and calculate the deployment point.
+              Since no good recovery hardware is available on the
+              market a new, redundant, and reliable computer needs
+              to be developed.</p>
+            <img class="image" src="images/vega.webp" alt="CATS Vega Flight Computer">
+            <p class="image-desc">Rendering of the CATS Vega flight computer</p>
+            <h4>Technology</h4>
+            <p>Based around a STM32 microcontroller the software
+              utilizes a Kalman Filter to fuse together sensor data to
+              get accurate velocity and altitude information. Over a
+              self-developed telemetry protocol, using FHSS and LoRa,
+              data can be sent to the ground.
+              High power output channels can switch valves or
+              pyrotechnics. Additionally, servo motor channels were
+              added to allow the user to set the device up as he likes.
+              Over USB and with a Electron desktop application the
+              user can easily change the device settings.</p>
+              <iframe src="https://personal-viewer.365.altium.com/client/index.html?feature=embed&source=F5182EB3-3D61-4A13-8921-5286EA820D73&activeView=PCB" width="100%" height="auto" style="overflow:hidden;border:none;width:100%;height:720px;" scrolling="no" allowfullscreen="true" onload="window.top.scrollTo(0,0);"></iframe> 
+              <p class="image-desc">Interactive Board Viewer</p>
+            </div>
         </div>
       </section>
       <!-- Second Project -->
       <section class="hidden">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-6">
-            <h2>Project 2</h2>
-            <h4>Subtitle</h4>
-            <p>This text needs to be different because otherwise the linter complains that there is duplicate 
-              text.</p>
-            <img class="image" src="images/placeholder.jpg" alt="placeholder image">
-            <p class="image-desc">Placeholder image</p>
+            <h2><a href="https://github.com/BA-OST-22">Parachute Reefing System for Sounding Rockets</a></h2>
+            <h4>Bachelor Thesis in collaboration with ARIS - 2022</h4>
+            <p>The association Akademische Raumfahrt Initiative
+              Schweiz (ARIS) brings together students from Swiss
+              universities interested in space exploration. Several
+              rockets have been built over the years for student
+              competitions and research. The rockets built by ARIS
+              are fully reusable, as they are recovered by parachute.
+              With the rockets getting larger and heavier with each
+              passing year, a solution to reduce the shock loads at
+              parachute opening is needed. Consequently, the
+              development of an active parachute reefing system was
+              proposed.
+            </p>
+            <img class="image filter-white" src="images/reefing-iilustration.svg" alt="Reefing Iilustration">
+            <h4>Technology</h4>
+            <p>The reefing line is guided through a ceramic heating
+              element and gets burned through at a target altitude.
+              Once the reefing line is cut, the parachute can fully open.
+              A custom hardware was developed to drive the heating
+              element, receive data over a telemetry link and process
+              sensor data. The system is based around a STM32
+              microcontroller and a Kalman Filter was developed and
+              deployed to estimate the rocket velocity and altitude.
+              The system is battery operated and lasts for a few
+              months in standby.
+            </p>
+            <img class="image" src="images/heating-elemet.jpg" alt="Reefing System Hardware">
+            <p class="image-desc">Reefing System Hardware</p>
           </div>
         </div>
-      </section>
+      </section>      
       <!-- Third Project -->
       <section class="hidden">
         <div class="row justify-content-center">
           <div class="col-12 col-md-8 col-lg-6">
-            <h2>Project 3</h2>
-            <h4>Subtitle</h4>
-            <p>Yet another awesome project</p>
-            <img class="image" src="images/placeholder.jpg" alt="placeholder image">
-            <p class="image-desc">Placeholder image</p>
+            <h2><a href="https://github.com/SA-OST-2021">Fleet Monitoring System</a></h2>
+            <h4>Semester Thesis in collaboration with Onway AG - 2021</h4>
+            <p>The company Onway AG is interested in providing an
+              elegant solution for public transport fleets (e.g. buses)
+              to gather low-level vehicle data and transmit them to a
+              cloud-based system. This information can then be used
+              to monitor the state of the vehicle and inform about
+              possible issues in real-time.
+              </p>
+            <img class="image" src="images/fleet-monitor.jpg" alt="Fleet Monitor Rendering">
+            <p class="image-desc">Renderings of the Fleet Monitoring System</p>
+            <h4>Technology</h4>
+            <p>The system is based around an ESP32-S2 system on
+              chip. The device connects directly to the CAN-Bus,
+              collects and filters incoming data, and forwards it to a
+              host device over Ethernet or WiFi. Additionally, an
+              accelerometer was added to monitor information about
+              the driving performance.
+              A file system was implemented to easily access the
+              configuration. The configuration can be uploaded via the
+              USB port or over the air.
+              </p>
           </div>
         </div>
       </section>
