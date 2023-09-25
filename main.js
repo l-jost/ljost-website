@@ -31,3 +31,17 @@ document.addEventListener('mouseleave', () => {
 })
 
 const cursor = document.querySelector('.cursor')
+
+// If mouse curser is intersecting with a hidden element add class hover
+const project = document.querySelectorAll('.project')
+
+project.forEach(element => {
+  element.addEventListener('mouseover', () => {
+    // Light up background
+    element.classList.add('hover')
+  })
+  element.addEventListener('mouseleave', () => {
+    // Light up background
+    element.classList.remove('hover')
+  })
+})

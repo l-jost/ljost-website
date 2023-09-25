@@ -64,3 +64,13 @@ footer {
   transform: translate(-50%, -50%);
   transition: width 0.15s, height 0.15s, opacity 0.15s;
 }
+
+.project {
+  padding: 25px;
+}
+
+.hover {
+  border-radius: 10px;
+  background-color: rgb(32, 32, 32);
+  transition: background-color 0.2s;
+}
