@@ -1,153 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Engineering Portfolio | Luca Jost</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet">
-  </head>
-  <body>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script defer src="main.js"></script>
-    <!-- Header -->
-    <header class="container-fluid">
-      <section class="hidden">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6">
-            <h1>Engineering Portfolio</h1>
-            <h3>Luca Jost</h3>
-            <a class="hover" href="https://github.com/l-jost">
-            <span class="external-link-icon">
-              <img src="images/github-mark-white.svg" alt="Github Icon" width="36" height="36">
-            </span>
-            </a>
-          </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Control and Telemetry Systems offers expert embedded systems design, hardware development, and firmware engineering services. We build robust electronic products.">
+    <title>Control and Telemetry Systems - Embedded Systems Experts</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Control and Telemetry Systems Logo" id="logo">
+        <div class="header-content">
+            <h1>Control and Telemetry Systems</h1>
+            <nav>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="button header-contact-button">Contact</a>
         </div>
-      </section>
     </header>
-    <main class="container-fluid">
-      <!-- First Project -->
-      <section class="hidden">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6">
-            <h2>
-              <a class="hover" href="https://catsystems.io">
-                Sounding Rocket Flight Computers 
-                <span class="external-link-icon">
-                  <img src="images/external-link.svg" alt="External Link Icon"> 
-                </span>
-              </a>
-            </h2>
-            <h4>Personal Project - 2020-2023</h4>
-            <p>
-              In order to successfully recover model rockets, precise timing 
-              is essential for the ejection of a parachute. Achieving this 
-              requires the utilization of a flight computer, which continually 
-              monitors altitude data and computes the optimal deployment moment. 
-              Given the absence of suitable recovery hardware in the current 
-              market, there is a pressing need to innovate and create a new, 
-              redundant, and dependable computer system for this purpose.</p>
-            <img class="image" src="images/vega.webp" alt="CATS Vega Flight Computer">
-            <p class="image-desc">Rendering of the CATS Vega flight computer</p>
-            <h4>Technology</h4>
-            <p>Built around an STM32 microcontroller, the software leverages 
-              a sophisticated Kalman Filter to integrate sensor data, ensuring 
-              precise and reliable velocity and altitude measurements. Employing 
-              a self-developed telemetry protocol that combines Frequency-Hopping 
-              Spread Spectrum (FHSS) and LoRa technology, telemetry data can 
-              efficiently be transmitted to a ground station. Moreover, the system 
-              boasts high-power output channels capable of controlling valves or 
-              pyrotechnic devices. To further enhance user customization, it
-              incorporated servo motor channels, allowing users to configure 
-              the device to their preferences. Streamlining the user experience, 
-              adjustments to device settings can be effortlessly made via USB 
-              connection in a user-friendly Electron desktop application.</p>
-              <iframe src="https://personal-viewer.365.altium.com/client/index.html?feature=embed&source=F5182EB3-3D61-4A13-8921-5286EA820D73&activeView=SCH" width="100%" height="auto" style="overflow:hidden;border:none;width:100%;height:500px;" scrolling="no" allowfullscreen="true" onload="window.top.scrollTo(0,0);"></iframe> 
-              <p class="image-desc">Interactive Board Viewer</p>
+
+    <section id="hero">
+        <h2>Building Robust Embedded Systems</h2>
+        <p>Expertise in embedded systems design, from initial concept and hardware development to firmware engineering and system integration. We bring your complex electronic products to market.</p>
+        <a href="services.html" class="button">Explore Our Services</a>
+    </section>
+
+    <main>
+        <section id="about-intro">
+            <h3>About Control and Telemetry Systems</h3>
+            <p>Specializing in the development of sophisticated electronic products with a core focus on embedded microcontroller systems, control algorithms, and reliable IoT systems. I am passionate about creating intelligent, connected, and efficient solutions.</p>
+            <p>With experience in mixed-signal hardware design, real-time embedded software, and rigorous testing methodologies to deliver robust and dependable products for demanding applications across various industries.</p>
+            <p>Based in Switzerland, Control and Telemetry Systems leverages a remote engineering model. This allows offering cost-optimized solutions while ensuring seamless communication and upholding the rigorous quality standards expected from Swiss engineering.</p>
+            <a href="about.html" class="button">Learn More</a>
+        </section>
+
+        <section id="featured-services">
+            <h3>Development Services</h3>
+            <div class="services-grid">
+                <div class="service">
+                    <img src="images/software-service.jpg" alt="Circuit board with code overlay representing embedded software development" class="service-image">
+                    <h4>Embedded Software Development</h4>
+                    <p>Firmware and embedded software development for microcontrollers and embedded systems, including RTOS integration.</p>
+                    <a href="services.html#service-software" class="button-small">Learn More</a>
+                </div>
+                <div class="service">
+                    <img src="images/hw-service.jpg" alt="Close-up of a complex PCB representing hardware development" class="service-image">
+                    <h4>Hardware Development</h4>
+                    <p>Schematic design, PCB layout, and hardware prototyping for electronic products incorporating both analog and digital circuits.</p>
+                    <a href="services.html#service-hardware" class="button-small">Learn More</a>
+                </div>
+                <div class="service">
+                    <img src="images/iot-service.jpg" alt="ESP32 microcontroller connected to sensors representing IoT solutions" class="service-image">
+                    <h4>ESP32 &amp; Wi-Fi IoT Solutions</h4>
+                    <p>Specializing in Wi-Fi connected IoT products using the ESP32 platform, from device firmware to cloud integration.</p>
+                    <a href="services.html#service-iot" class="button-small">Learn More</a>
+                </div>
             </div>
-        </div>
-      </section>
-      <!-- Second Project -->
-      <section class="hidden">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6">
-            <h2>
-              <a href="https://github.com/BA-OST-22">
-                Parachute Reefing System for Sounding Rockets
-                <span class="external-link-icon">
-                  <img src="images/external-link.svg" alt="External Link Icon"> 
-                </span>
-              </a>
-            </h2>
-            <h4>Bachelor Thesis in collaboration with ARIS - 2022</h4>
-            <p>The association Akademische Raumfahrt Initiative
-              Schweiz (ARIS) brings together students from Swiss
-              universities interested in space exploration. Several
-              rockets have been built over the years for student
-              competitions and research. The rockets built by ARIS
-              are fully reusable, as they are recovered by parachute.
-              With the rockets getting larger and heavier with each
-              passing year, a solution to reduce the shock loads at
-              parachute opening is needed. Consequently, the
-              development of an active parachute reefing system was
-              proposed.
-            </p>
-            <img class="image filter-white" src="images/reefing-iilustration.svg" alt="Reefing Iilustration">
-            <h4>Technology</h4>
-            <p>The reefing line is guided through a ceramic heating
-              element and gets burned through at a target altitude.
-              Once the reefing line is cut, the parachute can fully open.
-              A custom hardware was developed to drive the heating
-              element, receive data over a telemetry link and process
-              sensor data. The system is based around a STM32
-              microcontroller and a Kalman Filter was developed and
-              deployed to estimate the rocket velocity and altitude.
-              The system is battery operated and lasts for a few
-              months in standby.
-            </p>
-            <img class="image" src="images/heating-elemet.jpg" alt="Reefing System Hardware">
-            <p class="image-desc">Reefing System Hardware</p>
-          </div>
-        </div>
-      </section>      
-      <!-- Third Project -->
-      <section class="hidden">
-        <div class="row justify-content-center">
-          <div class="col-12 col-md-8 col-lg-6">
-            <h2>
-              <a href="https://github.com/SA-OST-2021">
-                Fleet Monitoring System
-                <span class="external-link-icon">
-                  <img src="images/external-link.svg" alt="External Link Icon"> 
-                </span>
-              </a>
-            </h2>
-            <h4>Semester Thesis in collaboration with Onway AG - 2021</h4>
-            <p>The company Onway AG is interested in providing an
-              elegant solution for public transport fleets (e.g. buses)
-              to gather low-level vehicle data and transmit them to a
-              cloud-based system. This information can then be used
-              to monitor the state of the vehicle and inform about
-              possible issues in real-time.
-              </p>
-            <img class="image" src="images/fleet-monitor.jpg" alt="Fleet Monitor Rendering">
-            <p class="image-desc">Renderings of the Fleet Monitoring System</p>
-            <h4>Technology</h4>
-            <p>The system is based around an ESP32-S2 system on
-              chip. The device connects directly to the CAN-Bus,
-              collects and filters incoming data, and forwards it to a
-              host device over Ethernet or WiFi. Additionally, an
-              accelerometer was added to monitor information about
-              the driving performance.
-              A file system was implemented to easily access the
-              configuration. The configuration can be uploaded via the
-              USB port or over the air.
-              </p>
-          </div>
-        </div>
-      </section>
+        </section>
+
+        <section id="featured-projects">
+            <h3>Featured Projects</h3>
+            <div class="projects-grid">
+                <div class="featured-project">
+                    <img src="images/vega.avif" alt="Vega Flight Computer PCB for rocketry recovery" class="project-thumbnail">
+                    <h4>Vega Flight Computer</h4>
+                    <p>Versatile flight computer for rocketry recovery with automatic orientation detection and configurable event triggering.</p>
+                     <a href="projects.html#project-vega" class="button-small">View Project</a>
+                 </div>
+                 <div class="featured-project">
+                     <img src="images/reefing-computer.jpg" alt="Custom PCB for parachute reefing system control" class="project-thumbnail">
+                     <h4>Parachute Reefing System</h4>
+                     <p>Active reefing system to mitigate high shock loads during parachute deployment for large research rockets.</p>
+                     <a href="projects.html#project-reefing" class="button-small">View Project</a>
+                 </div>
+             </div>
+        </section>
     </main>
-  </body>
+
+    <footer>
+        <p>&copy; 2025 Control and Telemetry Systems. All rights reserved.</p>
+        <p>Contact: <a href="mailto:contact@ljost.com">contact@ljost.com</a></p>
+    </footer>
+</body>
 </html>
