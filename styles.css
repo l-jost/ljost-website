@@ -8,7 +8,6 @@
     --text-light: #f8f9fa;
     --border-color: #dee2e6;
     --shadow-color: rgb(0 0 0 / 10%);
-
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Lato', sans-serif;
 }
@@ -26,7 +25,6 @@ header {
     background-color: var(--primary-color);
     color: var(--text-light);
     padding: 15px 30px;
-
     box-shadow: 0 2px 4px var(--shadow-color);
     display: flex;
     align-items: center;
@@ -96,9 +94,17 @@ h2, h3, h4 {
     margin-bottom: 15px;
 }
 
-h2 { font-size: 1.8em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1.2em; color: var(--secondary-color); margin-top: 0; }
+h2 {
+    font-size: 1.8em;
+}
+h3 {
+    font-size: 1.5em;
+}
+h4 {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-top: 0;
+}
 
 
 #hero {
@@ -161,7 +167,6 @@ h4 { font-size: 1.2em; color: var(--secondary-color); margin-top: 0; }
 #hero p,
 #hero .button {
     position: relative;
-
     z-index: 1;
 }
 
@@ -240,6 +245,11 @@ h4 { font-size: 1.2em; color: var(--secondary-color); margin-top: 0; }
     margin-top: 0;
     padding: 8px 18px;
     font-size: 0.9em;
+}
+
+.header-contact-button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
 }
 
 footer {
@@ -396,6 +406,7 @@ footer {
 
 
 @media (width <= 768px) {
+
     .about-section {
         flex-direction: column;
         align-items: center;
@@ -424,9 +435,11 @@ footer {
         order: -1;
      }
 
+
      .about-founder-image {
         display: none;
      }
+
 
     .service-detail .service-image {
         float: none;
@@ -437,16 +450,23 @@ footer {
 }
 
 @media (width <= 768px) {
+
     header h1 {
         font-size: 1.8em;
     }
+
+
     #hero h2 {
         font-size: 2em;
     }
+
+
     main {
         padding: 20px 15px;
         margin: 20px auto;
     }
+
+
     .services-grid,
     .projects-grid {
         grid-template-columns: 1fr;
