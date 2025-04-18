@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-        <img src="images/logo.svg" alt="Control and Telemetry Systems Logo" id="logo">
+        <a href="index.html"><img src="images/logo.svg" alt="Control and Telemetry Systems Logo" id="logo"></a>
         <div class="header-content">
             <h1>Control and Telemetry Systems</h1>
             <nav>
@@ -27,6 +27,11 @@
             </nav>
             <a href="contact.html" class="button header-contact-button">Contact</a>
         </div>
+        <button class="menu-toggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
     <main>
@@ -76,5 +81,17 @@
         <p>&copy; 2025 Control and Telemetry Systems. All rights reserved.</p>
         <p>Contact: <a href="mailto:contact@ljost.com">contact@ljost.com</a></p>
     </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            // Optional: Add ARIA attribute changes for accessibility
+            const isExpanded = nav.classList.contains('active');
+            menuToggle.setAttribute('aria-expanded', isExpanded);
+        });
+    </script>
 </body>
 </html>

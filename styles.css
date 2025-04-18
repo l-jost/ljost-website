@@ -48,6 +48,7 @@ header h1 {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 2.0em;
+    display: none; /* Hide by default */
 }
 
 nav ul {
@@ -74,6 +75,26 @@ nav ul li a {
 
 nav ul li a:hover {
     color: var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none; /* Hidden by default on larger screens */
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    margin-left: auto; /* Push it to the right */
+}
+
+.menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-light);
+    margin: 5px 0;
+    transition: all 0.3s ease-in-out;
 }
 
 main {
@@ -436,12 +457,61 @@ footer {
         display: block;
         margin: 15px auto;
         max-width: 90%;
-    }
-}
+     }
 
-@media (width <= 768px) {
-    header h1 {
-        font-size: 1.8em;
+    /* Mobile Navigation Adjustments */
+    nav {
+        position: absolute;
+        top: 80px; /* Adjust based on header height */
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        box-shadow: 0 2px 4px var(--shadow-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-out;
+        z-index: 100; /* Ensure it's above other content */
+    }
+
+    nav.active {
+         max-height: 500px; /* Adjust as needed */
+    }
+
+    nav ul {
+        display: block; /* Stack items vertically */
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block; /* Make list items block level */
+        margin: 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgb(255 255 255 / 10%); /* Updated color notation */
+    }
+
+     nav ul li:last-child a {
+        border-bottom: none;
+    }
+
+    nav ul li a:hover {
+        background-color: var(--secondary-color);
+        color: var(--text-light);
+    }
+
+    .header-content {
+        margin-left: auto; /* Push contact button and toggle to the right */
+        order: 1; /* Ensure it comes before the toggle */
+    }
+
+    .menu-toggle {
+        display: block; /* Show the toggle button */
+        margin-left: 0; /* Remove the auto margin */
+        order: 2; /* Ensure toggle comes last */
     }
 
     #hero h2 {
@@ -456,5 +526,11 @@ footer {
     .services-grid,
     .projects-grid {
         grid-template-columns: 1fr;
-     }
-}
+      }
+ }
+ 
+ @media (width >= 1200px) {
+    header h1 {
+        display: block;
+    }
+ }
