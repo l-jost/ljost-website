@@ -1,0 +1,447 @@
+/* styles.css - Modernized */
+
+:root {
+    --primary-color: #222222; /* Dark Gray */
+    --secondary-color: #F28C28; /* Orange */
+    --accent-color: #222222; /* Dark Gray */
+    --background-light: #f8f9fa;
+    --background-white: #ffffff;
+    --text-dark: #111;
+    --text-light: #f8f9fa;
+    --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Lato', sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6; /* Improved readability */
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 15px 30px; /* Adjusted padding */
+    /* text-align: center; Removed */
+    box-shadow: 0 2px 4px var(--shadow-color);
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Vertically align items */
+    gap: 20px; /* Space between logo and content */
+}
+
+#logo {
+    height: 50px; /* Adjust height as needed */
+    width: auto;
+}
+
+.header-content {
+    flex-grow: 1; /* Allow content to take remaining space */
+    display: flex; /* Use Flexbox for inner content */
+    align-items: center; /* Vertically align title, nav, button */
+    gap: 20px; /* Space between items if needed */
+}
+
+header h1 {
+    margin: 0 0 5px 0; /* Adjusted margin */
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 2.0em; /* Slightly smaller to fit better */
+}
+
+/* Basic Nav Styling (can be expanded) */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Reset margin */
+}
+
+nav {
+    margin-left: auto; /* Push nav and button to the right */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Removed top margin */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+main {
+    padding: 40px 20px; /* Keep padding for content spacing */
+    max-width: 1100px; /* Restore max-width */
+    margin: 40px auto; /* Restore margin for centering and vertical spacing */
+    /* Container styles removed: background-color, box-shadow, border-radius */
+}
+
+section {
+    margin-bottom: 40px; /* Consistent spacing between sections */
+}
+
+h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 15px; /* Spacing below headings */
+}
+
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.5em; }
+/* Apply specific h4 styles below, removing margin-top here if needed */
+h4 { font-size: 1.2em; color: var(--secondary-color); margin-top: 0; } /* Different color for service titles, remove default top margin */
+
+
+#hero {
+    text-align: center;
+    padding: 60px 30px; /* More padding */
+    background-image: url('images/main.jpg'); /* Added background image */
+    background-size: cover; /* Ensure image covers the section */
+    background-position: center center; /* Center the image */
+    color: var(--text-light);
+    position: relative; /* Needed for potential overlay */
+    /* Removed background-color */
+    /* Removed border-radius and margin-bottom for full-width effect */
+}
+
+/* Add overlay */
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 0; /* Ensure overlay is behind content */
+}
+
+#hero h2,
+#hero p,
+#hero .button {
+    position: relative; /* Ensure content is above the overlay */
+    z-index: 1; /* Ensure content is above the overlay */
+}
+
+
+#hero h2 {
+    color: var(--text-light); /* Override default heading color */
+    font-size: 2.5em; /* Larger hero heading */
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 25px auto; /* Center paragraph */
+}
+
+#about-intro p,
+.service-detail p,
+.service-detail ul {
+    margin-bottom: 15px;
+}
+
+.service-detail ul {
+    list-style: disc;
+    margin-left: 20px;
+    padding-left: 10px;
+}
+
+.service-detail li {
+    margin-bottom: 8px;
+}
+
+#featured-services {
+    margin-top: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Increased gap */
+    margin-top: 25px;
+}
+
+.service {
+    text-align: left; /* Center align all content */
+}
+
+/* Service Image Styling */
+.service-image {
+    height: 200px; /* Updated height for the image */
+    width: 100%; /* Force landscape aspect within container */
+    max-width: 100%; /* Ensure it doesn't overflow container */
+    object-fit: cover; /* Crop image to fit the defined box */
+    margin-bottom: 15px; /* Space below image */
+    display: block; /* Ensure it takes its own line */
+    margin-left: auto; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+    border-radius: 4px; /* Optional: slightly rounded corners */
+}
+
+/* Service Detail Page Image Styling */
+.service-detail .service-image {
+    max-width: 300px; /* Limit max width */
+    max-height: 350px; /* Limit max height */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure image covers the area */
+    float: right; /* Float image to the right */
+    margin: 0 0 15px 20px; /* Top, Right, Bottom, Left margins */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px var(--shadow-color); /* Add subtle shadow */
+}
+
+/* Clearfix for floated images within service-detail */
+.service-detail::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.button, .button-small {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: var(--secondary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.header-contact-button {
+    margin-top: 0; /* Override default button margin */
+    padding: 8px 18px; /* Make it slightly smaller */
+    font-size: 0.9em;
+}
+
+.button:hover, .button-small:hover, .header-contact-button:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.button-small {
+    padding: 8px 18px;
+    font-size: 0.9em;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0; /* Increased padding */
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    margin-top: 40px; /* Ensure space above footer */
+    /* Removed position: relative and bottom: 0 for natural flow */
+    width: 100%;
+}
+
+/* Contact Form Styling */
+#contact-form-section {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-family: var(--font-body);
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+#contact-form button[type="submit"] {
+    margin-top: 0; /* Override default button margin */
+}
+
+/* About Page Specific Styles */
+.about-section {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 30px; /* Space between text and image */
+    margin-bottom: 40px; /* Consistent spacing */
+}
+
+/* Ensure sections alternate image/text order if needed - this assumes image first, then text for expertise */
+#expertise-summary {
+    flex-direction: row-reverse; /* Put image on the right for this section */
+}
+
+
+.about-text {
+    flex: 2; /* Allow text to take up more space */
+}
+
+.about-image {
+    flex: 1; /* Allow image to take up less space */
+    text-align: center; /* Center image within its container */
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Match other rounded corners */
+    box-shadow: 0 4px 8px var(--shadow-color); /* Subtle shadow */
+}
+
+/* Project Page Specific Styles */
+.project {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+.project:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.project h3 {
+    /* Overrides general h3 if needed, or keep general */
+    margin-bottom: 10px; /* Specific margin from inline style */
+}
+.project h4 { /* Technology heading */
+     margin-top: 20px;
+     margin-bottom: 5px;
+     font-size: 1.1em;
+     color: var(--primary-color); /* Use primary color as per inline style */
+}
+.project-meta {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+}
+.project-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 15px;
+    display: block; /* Ensure image is block level */
+    margin-left: auto; /* Center image if needed */
+    margin-right: auto; /* Center image if needed */
+    border-radius: 4px; /* Optional: add slight rounding */
+}
+
+/* Featured Projects Section (Homepage) */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust minmax as needed */
+    gap: 30px;
+    margin-top: 25px;
+}
+
+.featured-project {
+    text-align: left;
+}
+
+.project-thumbnail {
+    max-width: 100%;
+    height: 300px; /* Fixed height for consistency */
+    object-fit: cover; /* Scale image nicely */
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.featured-project h4 {
+    color: var(--primary-color); /* Match other h4s or use secondary */
+    margin-bottom: 10px;
+}
+
+.featured-project p {
+    font-size: 0.95em;
+    margin-bottom: 15px;
+}
+
+
+/* Responsive adjustments for About page sections */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items when stacked */
+    }
+
+    /* Reset direction override on small screens */
+    #expertise-summary {
+        flex-direction: column;
+    }
+
+    .about-text,
+    .about-image {
+        flex: none; /* Reset flex sizing */
+        width: 90%; /* Control width when stacked */
+        margin-bottom: 20px; /* Add space between stacked items */
+    }
+
+     .about-image {
+        order: -1; /* Move image above text on small screens if desired (optional) */
+     }
+
+     /* Ensure expertise image is also above text */
+     #expertise-summary .about-image {
+        order: -1;
+     }
+
+     /* Responsive adjustments for service images */
+    .service-detail .service-image {
+        float: none; /* Disable float on smaller screens */
+        display: block; /* Ensure it's block level */
+        margin: 15px auto; /* Center image with vertical margins */
+        max-width: 90%; /* Allow image to be wider */
+    }
+}
+
+/* Add basic responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    #hero h2 {
+        font-size: 2em;
+    }
+    main {
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+    .services-grid {
+        grid-template-columns: 1fr; /* Stack services on smaller screens */
+     }
+}

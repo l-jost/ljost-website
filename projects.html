@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View example projects by Control and Telemetry Systems, showcasing expertise in flight computers, ground stations, IoT fleet monitoring, and more embedded systems solutions.">
+    <title>Control and Telemetry Systems - Projects</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"> <!-- Added Favicon -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Control and Telemetry Systems Logo" id="logo">
+        <div class="header-content">
+            <h1>Control and Telemetry Systems</h1>
+            <nav>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="button header-contact-button">Contact</a> <!-- Added Contact Button -->
+        </div>
+    </header>
+
+    <main>
+        <section id="projects-intro">
+            <h2>Example Projects</h2>
+            <p>Showcasing our expertise in embedded systems, hardware design, and software development through various challenging projects.</p>
+        </section>
+
+        <section id="project-list">
+
+            <article class="project" id="project-vega"> <!-- Added ID -->
+                <h3>Vega Flight Computer</h3>
+                <p class="project-meta">Control and Telemetry Systems Product</p> <!-- Merged info -->
+                <p>Engineered a versatile flight computer addressing the need for reliable rocketry recovery hardware. Features automatic orientation detection and a configurable Finite State Machine managing flight phases and triggering user-defined events (pyro, servo, GPIO).</p>
+                <img src="images/vega.avif" alt="Vega Flight Computer PCB for rocketry recovery" class="project-image">
+                <h4>Engineering Highlights</h4> <!-- Combined highlights -->
+                <p>Leverages an STM32 microcontroller with advanced Kalman Filter sensor fusion for precise tracking. Implements a custom, robust 2.4GHz FHSS telemetry system for secure, long-range (10km+ tested), high-rate (10Hz) data transmission. Includes high-power outputs, configurable servo control, comprehensive onboard data logging, and streamlined configuration via a custom Electron desktop application.</p>
+            </article>
+
+            <article class="project"> <!-- Removed ID -->
+                <h3>Ground Station</h3>
+                <p class="project-meta">Control and Telemetry Systems Product</p>
+                <p>Developed the companion hardware for the Vega flight computer, enabling real-time monitoring, tracking, and interaction during rocket flights.</p>
+                <img src="images/ground-station.avif" alt="Custom ground station hardware with display and controls" class="project-image">
+                <h4>Engineering Highlights</h4> <!-- Rewritten section -->
+                <p>Features dual SX1280 radios supporting reception from two independent Vega units or diversity tracking of one. Incorporates a high-visibility transflective display, USB-C charging, onboard logging, and integrated compass/GNSS for enhanced tracking. Software enables remote event triggering for testing and immediate post-flight data review via an integrated plotter. Secure pairing with Vega units is managed via a simple "link phrase".</p>
+            </article>
+            
+            <article class="project" id="project-reefing"> <!-- Added ID -->
+                <h3>Parachute Reefing System for Sounding Rockets</h3>
+                <p class="project-meta">Collaboration with ARIS</p>
+                <p>To mitigate high shock loads during parachute deployment on increasingly large research rockets for ARIS, an active reefing system was engineered. This system controls the parachute's initial opening size, allowing for a gentler full deployment at a specific altitude.</p>
+                 <img src="images/reefing-computer.jpg" alt="Custom PCB for parachute reefing system control" class="project-image">
+               <h4>Engineering Highlights</h4>
+                <p>The core mechanism involved precisely cutting a reefing line using a controlled ceramic heating element. Custom STM32-based hardware was developed to manage the heating element, process sensor data for altitude determination (using a Kalman Filter), and handle telemetry communication. Significant focus was placed on power management for long standby times in battery-operated scenarios.</p>
+            </article>
+
+            <article class="project">
+                <h3>Fleet Monitoring System</h3>
+                <p class="project-meta">Collaboration with Onway AG</p>
+                <p>Developed an IoT solution for Onway AG to enable real-time monitoring of public transport vehicle fleets. The system gathers low-level vehicle data directly from the CAN bus and transmits it to a cloud backend for analysis and issue detection.</p>
+                 <img src="images/fleet-monitor.jpg" alt="ESP32-based IoT device for vehicle fleet monitoring" class="project-image">
+                <h4>Engineering Highlights</h4>
+                <p>Based on an ESP32-S2 SoC, the system features direct CAN bus interfacing, data filtering, and flexible data forwarding via Ethernet or Wi-Fi. An integrated accelerometer provides driving performance metrics. Robustness was enhanced with an onboard file system for configuration management, supporting updates via USB or Over-the-Air (OTA).</p>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Control and Telemetry Systems. All rights reserved.</p>
+        <p>Contact: <a href="mailto:contact@controltelemetry.example">contact@controltelemetry.example</a></p> <!-- Added Contact Info -->
+    </footer>
+</body>
+</html>

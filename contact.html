@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Control and Telemetry Systems for inquiries about embedded systems design, hardware development, and firmware engineering services.">
+    <title>Contact - Control and Telemetry Systems</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.svg" alt="Control and Telemetry Systems Logo" id="logo">
+        <div class="header-content">
+            <h1>Control and Telemetry Systems</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="button header-contact-button">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="contact-intro">
+            <h2>Get In Touch</h2>
+            <p>Have a project in mind or questions about our services? Fill out the form below or email us directly.</p>
+        </section>
+
+        <section id="contact-details">
+            <h3>Contact Information</h3>
+            <p><strong>Email:</strong> <a href="mailto:contact@controltelemetry.example">contact@controltelemetry.example</a></p>
+            <!-- Add Phone or Address if desired -->
+        </section>
+
+        <section id="contact-form-section">
+            <h3>Contact Form</h3>
+            <form id="contact-form" action="mailto:contact@controltelemetry.example" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Control and Telemetry Systems. All rights reserved.</p>
+        <p>Contact: <a href="mailto:contact@controltelemetry.example">contact@controltelemetry.example</a></p>
+    </footer>
+</body>
+</html>
