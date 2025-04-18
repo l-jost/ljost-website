@@ -97,9 +97,11 @@ h2, h3, h4 {
 h2 {
     font-size: 1.8em;
 }
+
 h3 {
     font-size: 1.5em;
 }
+
 h4 {
     font-size: 1.2em;
     color: var(--secondary-color);
@@ -145,6 +147,12 @@ h4 {
 }
 
 .button-small {
+    padding: 8px 18px;
+    font-size: 0.9em;
+}
+
+.header-contact-button {
+    margin-top: 0;
     padding: 8px 18px;
     font-size: 0.9em;
 }
@@ -239,17 +247,6 @@ h4 {
     content: "";
     display: table;
     clear: both;
-}
-
-.header-contact-button {
-    margin-top: 0;
-    padding: 8px 18px;
-    font-size: 0.9em;
-}
-
-.header-contact-button:hover {
-    background-color: var(--accent-color);
-    transform: translateY(-2px);
 }
 
 footer {
@@ -406,17 +403,14 @@ footer {
 
 
 @media (width <= 768px) {
-
     .about-section {
         flex-direction: column;
         align-items: center;
     }
 
-
     #expertise-summary {
         flex-direction: column;
     }
-
 
     .about-text,
     .about-image {
@@ -425,21 +419,17 @@ footer {
         margin-bottom: 20px;
     }
 
-
      .about-image {
         order: -1;
      }
-
 
      #expertise-summary .about-image {
         order: -1;
      }
 
-
      .about-founder-image {
         display: none;
      }
-
 
     .service-detail .service-image {
         float: none;
@@ -450,22 +440,18 @@ footer {
 }
 
 @media (width <= 768px) {
-
     header h1 {
         font-size: 1.8em;
     }
-
 
     #hero h2 {
         font-size: 2em;
     }
 
-
     main {
         padding: 20px 15px;
         margin: 20px auto;
     }
-
 
     .services-grid,
     .projects-grid {
