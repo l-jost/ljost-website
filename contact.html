@@ -36,13 +36,12 @@
 
         <section id="contact-details">
             <h3>Contact Information</h3>
-            <p><strong>Email:</strong> <a href="mailto:contact@controltelemetry.example">contact@controltelemetry.example</a></p>
-            <!-- Add Phone or Address if desired -->
+            <p><strong>Email:</strong> <a href="mailto:contact@ljost.com">contact@ljost.com</a></p>
         </section>
 
         <section id="contact-form-section">
             <h3>Contact Form</h3>
-            <form id="contact-form" action="mailto:contact@controltelemetry.example" method="post" enctype="text/plain">
+            <form id="contact-form" action="https://formspree.io/f/xpwpgjer" method="POST">
                 <div class="form-group">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -59,14 +58,46 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="6" required></textarea>
                 </div>
-                <button type="submit" class="button">Send Message</button>
+                <div class="g-recaptcha"
+                     data-sitekey="6LfDsBwrAAAAAA7pubN5cwfvBA5YF9d4irC9_azS"
+                     data-callback="recaptchaCallback"
+                     data-expired-callback="recaptchaExpiredCallback"></div>
+                <br/>
+                <button type="submit" class="button" id="submit-button">Send Message</button>
             </form>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Control and Telemetry Systems. All rights reserved.</p>
-        <p>Contact: <a href="mailto:contact@controltelemetry.example">contact@controltelemetry.example</a></p>
+        <p>Contact: <a href="mailto:contact@ljost.com">contact@ljost.com</a></p>
     </footer>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+        const submitButton = document.getElementById('submit-button');
+
+        // Disable button initially
+        submitButton.disabled = true;
+
+        // Function called when reCAPTCHA is successfully completed
+        function recaptchaCallback() {
+            submitButton.disabled = false;
+        }
+
+        // Function called when reCAPTCHA expires
+        function recaptchaExpiredCallback() {
+            submitButton.disabled = true;
+        }
+
+        // Ensure button is disabled if the page is reloaded after submission attempt
+        window.onload = () => {
+             // Check if reCAPTCHA is already solved (e.g., back button)
+             if (typeof grecaptcha !== 'undefined' && grecaptcha.getResponse().length === 0) {
+                 submitButton.disabled = true;
+             } else if (typeof grecaptcha !== 'undefined' && grecaptcha.getResponse().length !== 0) {
+                 submitButton.disabled = false; // Enable if already solved
+             }
+        };
+    </script>
 </body>
 </html>
