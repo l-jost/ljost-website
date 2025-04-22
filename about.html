@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Luca Jost, the founder of Control and Telemetry Systems, and his expertise in embedded systems, hardware design, and firmware engineering.">
-    <title>About Luca Jost - Control and Telemetry Systems</title>
+    <meta name="description" content="Learn about Luca Jost, the founder of Control and Telemetry Systems, and his expertise in embedded systems, hardware design, and firmware engineering." data-translate="about.meta.description">
+    <title data-translate="about.meta.title">About Luca Jost - Control and Telemetry Systems</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,20 +14,23 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="images/logo.svg" alt="Control and Telemetry Systems Logo" id="logo"></a>
+        <a href="index.html"><img src="images/logo.svg" alt="Control and Telemetry Systems Logo" id="logo" data-translate="header.logo.alt"></a>
         <div class="header-content">
-            <h1>Control and Telemetry Systems</h1>
+            <h1 data-translate="header.title">Control and Telemetry Systems</h1>
             <nav>
                 <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                <li><a href="about.html" data-translate="nav.about">About</a></li>
+                <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                <li><a href="projects.html" data-translate="nav.projects">Projects</a></li>
                 </ul>
             </nav>
-            <a href="contact.html" class="button header-contact-button">Contact</a>
+             <div class="lang-switcher">
+                <a href="#" id="lang-en">EN</a> | <a href="#" id="lang-de">DE</a>
+            </div>
+            <a href="contact.html" class="button header-contact-button" data-translate="nav.contact">Contact</a>
         </div>
-        <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" data-translate="header.menu.ariaLabel">
             <span></span>
             <span></span>
             <span></span>
@@ -37,52 +40,52 @@
     <main>
         <section id="about-founder" class="about-section">
             <div class="about-text">
-                <h2>About Me: Luca Jost</h2>
-                <img src="images/me.jpg" alt="Picture of Luca Jost, founder of Control and Telemetry Systems" class="about-founder-image">
-                <p>Welcome! I'm Luca Jost, the founder of Control and Telemetry Systems. My passion for electronics and technology drives everything I do here. My journey has been one of continuous learning and hands-on project work.</p>
-                <p>My journey in engineering has taken me across the globe. After gaining valuable experience at Sensirion in Switzerland, I moved to New Zealand to contribute to the exciting field of space exploration at Rocket Lab. Now based in South Korea, my core passions remain space and electronics, and I thrive on the challenge of developing innovative solutions.</p>
-                <p>Control and Telemetry Systems began as a hobby project five years ago, initially focused on building a fully customizable open-source flight computer, named Vega, for amateur rockets designed to reach altitudes up to 30 kilometers. Since its inception, Vega has achieved remarkable success.</p>
-                <p>To date, Vega flight computers have flown successfully hundreds of times and have been supplied to people worldwide. Notably, Vega was selected as the official tracking and logging system for the biggest rocketry challenge in Europe (EuRoC) since 2023.</p>
-                <p>EuRoC, held annually in Portugal, brings together 25 student teams from across Europe to compete. Every rocket launched at EuRoC is equipped with a Vega flight computer, ensuring standardized apogee reporting and reliable rocket tracking. Teams also utilize Vega's capabilities to implement mechanisms like airbrakes for precise altitude control.</p>
+                <h2 data-translate="about.founder.heading">About Me: Luca Jost</h2>
+                <img src="images/me.jpg" alt="Picture of Luca Jost, founder of Control and Telemetry Systems" class="about-founder-image" data-translate="about.founder.img.alt">
+                <p data-translate="about.founder.p1">Welcome! I'm Luca Jost, the founder of Control and Telemetry Systems. My passion for electronics and technology drives everything I do here. My journey has been one of continuous learning and hands-on project work.</p>
+                <p data-translate="about.founder.p2">My journey in engineering has taken me across the globe. After gaining valuable experience at Sensirion in Switzerland, I moved to New Zealand to contribute to the exciting field of space exploration at Rocket Lab. Now based in South Korea, my core passions remain space and electronics, and I thrive on the challenge of developing innovative solutions.</p>
+                <p data-translate="about.founder.p3">Control and Telemetry Systems began as a hobby project five years ago, initially focused on building a fully customizable open-source flight computer, named Vega, for amateur rockets designed to reach altitudes up to 30 kilometers. Since its inception, Vega has achieved remarkable success.</p>
+                <p data-translate="about.founder.p4">To date, Vega flight computers have flown successfully hundreds of times and have been supplied to people worldwide. Notably, Vega was selected as the official tracking and logging system for the biggest rocketry challenge in Europe (EuRoC) since 2023.</p>
+                <p data-translate="about.founder.p5">EuRoC, held annually in Portugal, brings together 25 student teams from across Europe to compete. Every rocket launched at EuRoC is equipped with a Vega flight computer, ensuring standardized apogee reporting and reliable rocket tracking. Teams also utilize Vega's capabilities to implement mechanisms like airbrakes for precise altitude control.</p>
             </div>
         </section>
 
         <section id="expertise-summary">
-            <h3>Core Expertise</h3>
-            <p>My expertise spans the full lifecycle of embedded systems development:</p>
+            <h3 data-translate="about.expertise.heading">Core Expertise</h3>
+            <p data-translate="about.expertise.intro">My expertise spans the full lifecycle of embedded systems development:</p>
             <ul>
-                <li><strong>Hardware Design:</strong> I'm proficient in designing complex, mixed-signal PCBs for demanding applications using tools like Altium Designer. My experience covers microcontrollers (STM32), sensors, RF communication, power management, and high-power circuitry.</li>
-                <li><strong>Firmware Engineering:</strong> I develop robust and efficient firmware in C/C++ for bare-metal and RTOS environments (like STM32). My expertise includes low-level drivers (I2C, SPI, UART, CAN, LIN), control algorithms, sensor fusion (Kalman filters), and adhering to standards like MISRA/AUTOSAR.</li>
-                <li><strong>System Engineering:</strong> Experienced in requirement engineering, system architecture, testing, and validation, particularly within the aerospace and automotive sectors.</li>
-                <li><strong>Prototyping &amp; Manufacturing:</strong> Capable of managing the transition from design to production, including component sourcing and small-batch manufacturing coordination.</li>
+                <li data-translate="about.expertise.li1"><strong>Hardware Design:</strong> I'm proficient in designing complex, mixed-signal PCBs for demanding applications using tools like Altium Designer. My experience covers microcontrollers, sensors, RF communication, power management, and high-power circuitry.</li>
+                <li data-translate="about.expertise.li2"><strong>Firmware Engineering:</strong> I develop robust and efficient firmware in C/C++ for bare-metal and RTOS environments. My expertise includes low-level drivers (I2C, SPI, UART, CAN, LIN), control algorithms, sensor fusion (Kalman filters), and adhering to standards like MISRA/AUTOSAR.</li>
+                <li data-translate="about.expertise.li3"><strong>System Engineering:</strong> Experienced in requirement engineering, system architecture, testing, and validation, particularly within the aerospace and automotive sectors.</li>
+                <li data-translate="about.expertise.li4"><strong>Prototyping &amp; Manufacturing:</strong> Capable of managing the transition from design to production, including component sourcing and small-batch manufacturing coordination.</li>
             </ul>
         </section>
 
         <section id="experience-highlights">
-            <h3>Industry Experience Highlights</h3>
-            <p>I've had the opportunity to contribute to and lead projects across various demanding industries:</p>
+            <h3 data-translate="about.experience.heading">Industry Experience Highlights</h3>
+            <p data-translate="about.experience.intro">I've had the opportunity to contribute to and lead projects across various demanding industries:</p>
             <ul>
-                <li><strong>Aerospace (Rocket Lab):</strong> I held the primary responsibility of Technical Lead for the Electrical Power System (EPS), responsible for its design on Rocket Lab's Neutron Launch Vehicle. A medium-lift launch vehicle capable of delivering 13 metric tons to orbit.</li>
-                <li><strong>Automotive &amp; Industrial (Sensirion):</strong> I developed hardware and firmware for automotive sensors (LIN, Cortex-M0+), adhering to MISRA/AUTOSAR standards, and contributed to CI/CD processes.</li>
-                <li><strong>Consultancy &amp; Product Design (Control and Telemetry Systems GmbH):</strong> I co-founded this company, based in Switzerland. Here, I specialize in designing hardware and firmware for diverse applications (often using RTOS on STM32) and manage small-batch production.</li>
-                <li><strong>Research &amp; Development (IWK HSR):</strong> I designed flight computer hardware and firmware for fixed-wing UAVs, including PID stabilization and image processing algorithms (OpenCV/Python).</li>
+                <li data-translate="about.experience.li1"><strong>Aerospace (Rocket Lab):</strong> I held the primary responsibility of Technical Lead for the Electrical Power System (EPS), responsible for its design on Rocket Lab's Neutron Launch Vehicle. A medium-lift launch vehicle capable of delivering 13 metric tons to orbit.</li>
+                <li data-translate="about.experience.li2"><strong>Automotive &amp; Industrial (Sensirion):</strong> I developed hardware and firmware for automotive sensors (LIN, Cortex-M0+), adhering to MISRA/AUTOSAR standards, and contributed to CI/CD processes.</li>
+                <li data-translate="about.experience.li3"><strong>Consultancy &amp; Product Design (Control and Telemetry Systems GmbH):</strong> I co-founded this company, based in Switzerland. Here, I specialize in designing hardware and firmware for diverse applications (often using RTOS on STM32) and manage small-batch production.</li>
+                <li data-translate="about.experience.li4"><strong>Research &amp; Development (IWK HSR):</strong> I designed flight computer hardware and firmware for fixed-wing UAVs, including PID stabilization and image processing algorithms (OpenCV/Python).</li>
             </ul>
         </section>
 
         <section id="skills-education">
-            <h3>Technical Skills &amp; Education</h3>
+            <h3 data-translate="about.skills.heading">Technical Skills &amp; Education</h3>
              <ul>
-                <li><strong>Key Tools &amp; Technologies:</strong> Altium Designer (Excellent), C/C++ (Excellent), Python (Advanced), Git (Excellent), NX (Advanced), RTOS, various communication protocols (CAN, LIN, SPI, I2C, UART).</li>
-                <li><strong>Education:</strong> Bachelor of Science in Electrical Engineering (OST, formerly HSR Rapperswil), Electronics Technician (Technische Fachschule Biel).</li>
-                <li><strong>Languages:</strong> Fluent in English and German (Mother tongue).</li>
+                <li data-translate="about.skills.li1"><strong>Key Tools &amp; Technologies:</strong> Altium Designer (Excellent), C/C++ (Excellent), Python (Advanced), Git (Excellent), NX (Advanced), RTOS, various communication protocols (CAN, LIN, SPI, I2C, UART).</li>
+                <li data-translate="about.skills.li2"><strong>Education:</strong> Bachelor of Science in Electrical Engineering (OST, formerly HSR Rapperswil), Electronics Technician (Technische Fachschule Biel).</li>
+                <li data-translate="about.skills.li3"><strong>Languages:</strong> Fluent in English and German (Mother tongue).</li>
             </ul>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2025 Control and Telemetry Systems. All rights reserved.</p>
-        <p>Contact: <a href="mailto:contact@ljost.com">contact@ljost.com</a></p>
+        <p data-translate="footer.copyright">&copy; 2025 Control and Telemetry Systems. All rights reserved.</p>
+        <p data-translate="footer.contact">Contact: <a href="mailto:contact@ljost.com">contact@ljost.com</a></p>
     </footer>
 
     <script>
@@ -96,5 +99,6 @@
             menuToggle.setAttribute('aria-expanded', isExpanded);
         });
     </script>
+    <script src="translate.js" defer></script>
 </body>
 </html>
