@@ -47,9 +47,26 @@ header h1 {
     margin: 0 0 5px;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1.7em; /* Reduced size */
+    font-size: 1.7em;
     display: none; /* Hide by default */
 }
+
+ .lang-switcher {
+    margin-left: 20px;
+    margin-right: 10px;
+ }
+
+ .lang-switcher a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s ease;
+ }
+
+ .lang-switcher a:hover {
+    color: var(--secondary-color);
+ }
 
 nav ul {
     list-style: none;
@@ -533,24 +550,6 @@ footer {
     header h1 {
         display: block;
     }
- }
-
- /* Language Switcher Styles */
- .lang-switcher {
-    margin-left: 20px; /* Add some space before the contact button */
-    margin-right: 10px; /* Add some space after the switcher */
- }
-
- .lang-switcher a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px;
-    transition: color 0.3s ease;
- }
-
- .lang-switcher a:hover {
-    color: var(--secondary-color);
  }
 
  /* Adjust switcher position on mobile */
