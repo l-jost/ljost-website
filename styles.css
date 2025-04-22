@@ -523,7 +523,11 @@ footer {
 
     .header-content {
         margin-left: auto; /* Push contact button and toggle to the right */
-        order: 1; /* Ensure it comes before the toggle */
+        order: 1; /* Position after logo */
+        margin-left: auto; /* Push to the right */
+        display: flex; /* Use flex */
+        align-items: center; /* Align items inside */
+        gap: 15px; /* Gap between switcher and toggle if toggle was inside */
     }
 
     .menu-toggle {
@@ -550,17 +554,5 @@ footer {
  @media (width >= 1250px) {
     header h1 {
         display: block;
-    }
- }
-
- /* Adjust switcher position on mobile */
- @media (width <= 768px) {
-    .lang-switcher {
-        position: absolute;
-        top: 15px; /* Align vertically with logo/toggle */
-        right: 70px; /* Position it before the menu toggle */
-        margin-left: 0;
-        margin-right: 0;
-        z-index: 101; /* Ensure it's above the nav */
     }
  }

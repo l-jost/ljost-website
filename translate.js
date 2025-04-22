@@ -22,15 +22,19 @@ function applyTranslations (translations) {
     const key = element.getAttribute('data-translate')
     if (translations[key]) {
       // Handle different element types appropriately
-      if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+      if (element.classList.contains('menu-toggle')) { // Check for menu toggle button
+        if (element.hasAttribute('aria-label')) {
+            element.setAttribute('aria-label', translations[key]);
+        }
+      } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') { // Keep existing logic for inputs/textareas
         if (element.placeholder) {
           element.placeholder = translations[key]
         }
-      } else if (element.tagName === 'IMG') {
+      } else if (element.tagName === 'IMG') { // Keep existing logic for images
         if (element.alt) {
           element.alt = translations[key]
         }
-      } else {
+      } else { // Default case: update innerHTML for other elements
         element.innerHTML = translations[key]
       }
     } else {
