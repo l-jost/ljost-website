@@ -1,5 +1,5 @@
 // Function to fetch translation data
-async function fetchTranslations(lang) {
+async function fetchTranslations (lang) {
   try {
     const response = await fetch(`locales/${lang}.json`)
     if (!response.ok) {
@@ -7,7 +7,7 @@ async function fetchTranslations(lang) {
     }
     return await response.json()
   } catch (error) {
-    console.error("Could not fetch translations:", error)
+    console.error('Could not fetch translations:', error)
     // Fallback to English if the requested language fails
     if (lang !== 'en') {
       return await fetchTranslations('en')
@@ -30,17 +30,16 @@ function applyTranslations (translations) {
         if (element.alt) {
           element.alt = translations[key]
         }
-      }
-      else {
+      } else {
         element.innerHTML = translations[key]
       }
     } else {
       console.warn(`Translation key "${key}" not found.`)
     }
-  });
+  })
   // Update the lang attribute of the html tag
   const currentLang = localStorage.getItem('language') || 'en'
-  document.documentElement.lang = currentLang;
+  document.documentElement.lang = currentLang
 }
 
 // Function to change language and reload translations
@@ -64,9 +63,9 @@ function setupLanguageSwitcher () {
   if (langEnButton) {
     langEnButton.addEventListener('click', (e) => {
       e.preventDefault()
-      console.log("EN button clicked")
+      console.log('EN button clicked')
       changeLanguage('en')
-    });
+    })
   } else {
     console.warn('EN language button not found')
   }
@@ -74,22 +73,21 @@ function setupLanguageSwitcher () {
   if (langDeButton) {
     langDeButton.addEventListener('click', (e) => {
       e.preventDefault()
-      console.log("DE button clicked")
+      console.log('DE button clicked')
       changeLanguage('de')
-    });
+    })
   } else {
     console.warn('DE language button not found')
   }
 }
 
-
 // Initial load: Detect language and apply translations
 document.addEventListener('DOMContentLoaded', async () => {
   console.log('DOM fully loaded and parsed')
   // Check local storage first, then browser preference, default to 'en'
-  let currentLang = localStorage.getItem('language'); // Check localStorage FIRST
+  let currentLang = localStorage.getItem('language') // Check localStorage FIRST
   if (!currentLang) { // If nothing in localStorage...
-    console.log("No language found in localStorage, checking browser preference.")
+    console.log('No language found in localStorage, checking browser preference.')
     const browserLang = navigator.language.split('-')[0] // Get 'en' from 'en-US'
     currentLang = ['en', 'de'].includes(browserLang) ? browserLang : 'en' // Determine based on browser
     localStorage.setItem('language', currentLang) // Store the detected language for future loads
@@ -100,9 +98,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Apply translations based on the determined language (either from localStorage or browser detection)
   const translations = await fetchTranslations(currentLang)
-  applyTranslations(translations);
+  applyTranslations(translations)
   console.log(`Applied translations for: ${currentLang}`)
 
   // Set up the language switcher listeners
-  setupLanguageSwitcher();
-});
+  setupLanguageSwitcher()
+})
