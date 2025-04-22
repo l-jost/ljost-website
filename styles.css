@@ -51,22 +51,11 @@ header h1 {
     display: none; /* Hide by default */
 }
 
- .lang-switcher {
+.lang-switcher {
     margin-left: 20px;
     margin-right: 10px;
- }
+}
 
- .lang-switcher a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: bold;
-    padding: 5px;
-    transition: color 0.3s ease;
- }
-
- .lang-switcher a:hover {
-    color: var(--secondary-color);
- }
 
 nav ul {
     list-style: none;
@@ -90,7 +79,19 @@ nav ul li a {
     transition: color 0.3s ease;
 }
 
+.lang-switcher a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
 nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.lang-switcher a:hover {
     color: var(--secondary-color);
 }
 
