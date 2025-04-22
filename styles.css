@@ -524,16 +524,15 @@ footer {
     .header-content {
         margin-left: auto; /* Push contact button and toggle to the right */
         order: 1; /* Position after logo */
-        margin-left: auto; /* Push to the right */
         display: flex; /* Use flex */
         align-items: center; /* Align items inside */
         gap: 15px; /* Gap between switcher and toggle if toggle was inside */
     }
 
     .menu-toggle {
-        display: block; /* Show the toggle button */
-        margin-left: 0; /* Remove the auto margin */
-        order: 2; /* Ensure toggle comes last */
+        display: block;
+        margin-left: 0;
+        order: 2;
     }
 
     #hero h2 {

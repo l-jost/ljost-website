@@ -24,7 +24,7 @@ function applyTranslations (translations) {
       // Handle different element types appropriately
       if (element.classList.contains('menu-toggle')) { // Check for menu toggle button
         if (element.hasAttribute('aria-label')) {
-            element.setAttribute('aria-label', translations[key]);
+          element.setAttribute('aria-label', translations[key])
         }
       } else if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') { // Keep existing logic for inputs/textareas
         if (element.placeholder) {
