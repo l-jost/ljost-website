@@ -47,7 +47,7 @@ header h1 {
     margin: 0 0 5px;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 2.0em;
+    font-size: 1.7em; /* Reduced size */
     display: none; /* Hide by default */
 }
 
@@ -529,8 +529,38 @@ footer {
       }
  }
  
- @media (width >= 1200px) {
+ @media (width >= 1250px) {
     header h1 {
         display: block;
+    }
+ }
+
+ /* Language Switcher Styles */
+ .lang-switcher {
+    margin-left: 20px; /* Add some space before the contact button */
+    margin-right: 10px; /* Add some space after the switcher */
+ }
+
+ .lang-switcher a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    transition: color 0.3s ease;
+ }
+
+ .lang-switcher a:hover {
+    color: var(--secondary-color);
+ }
+
+ /* Adjust switcher position on mobile */
+ @media (width <= 768px) {
+    .lang-switcher {
+        position: absolute;
+        top: 15px; /* Align vertically with logo/toggle */
+        right: 70px; /* Position it before the menu toggle */
+        margin-left: 0;
+        margin-right: 0;
+        z-index: 101; /* Ensure it's above the nav */
     }
  }

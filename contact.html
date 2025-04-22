@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Control and Telemetry Systems for inquiries about embedded systems design, hardware development, and firmware engineering services.">
-    <title>Contact - Control and Telemetry Systems</title>
+    <meta name="description" content="Contact Control and Telemetry Systems for inquiries about embedded systems design, hardware development, and firmware engineering services." data-translate="contact.meta.description">
+    <title data-translate="contact.meta.title">Contact - Control and Telemetry Systems</title>
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,20 +14,23 @@
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="images/logo.svg" alt="Control and Telemetry Systems Logo" id="logo"></a>
+        <a href="index.html"><img src="images/logo.svg" alt="Control and Telemetry Systems Logo" id="logo" data-translate="header.logo.alt"></a>
         <div class="header-content">
-            <h1>Control and Telemetry Systems</h1>
+            <h1 data-translate="header.title">Control and Telemetry Systems</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html" data-translate="nav.home">Home</a></li>
+                    <li><a href="about.html" data-translate="nav.about">About</a></li>
+                    <li><a href="services.html" data-translate="nav.services">Services</a></li>
+                    <li><a href="projects.html" data-translate="nav.projects">Projects</a></li>
                 </ul>
             </nav>
-            <a href="contact.html" class="button header-contact-button">Contact</a>
+            <div class="lang-switcher">
+                <a href="#" id="lang-en">EN</a> | <a href="#" id="lang-de">DE</a>
+            </div>
+            <a href="contact.html" class="button header-contact-button" data-translate="nav.contact">Contact</a>
         </div>
-        <button class="menu-toggle" aria-label="Toggle navigation menu">
+        <button type="button" class="menu-toggle" aria-label="Toggle navigation menu" data-translate="header.menu.ariaLabel">
             <span></span>
             <span></span>
             <span></span>
@@ -36,32 +39,32 @@
 
     <main>
         <section id="contact-intro">
-            <h2>Get In Touch</h2>
-            <p>Have a project in mind or questions about our services? Fill out the form below or email us directly.</p>
+            <h2 data-translate="contact.intro.heading">Get In Touch</h2>
+            <p data-translate="contact.intro.desc">Have a project in mind or questions about our services? Fill out the form below or email us directly.</p>
         </section>
 
         <section id="contact-details">
-            <h3>Contact Information</h3>
-            <p><strong>Email:</strong> <a href="mailto:contact@ljost.com">contact@ljost.com</a></p>
+            <h3 data-translate="contact.details.heading">Contact Information</h3>
+            <p data-translate="contact.details.email"><strong>Email:</strong> <a href="mailto:contact@ljost.com">contact@ljost.com</a></p>
         </section>
 
         <section id="contact-form-section">
-            <h3>Contact Form</h3>
+            <h3 data-translate="contact.form.heading">Contact Form</h3>
             <form id="contact-form" action="https://formspree.io/f/xpwpgjer" method="POST">
                 <div class="form-group">
-                    <label for="name">Name:</label>
+                    <label for="name" data-translate="contact.form.nameLabel">Name:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
+                    <label for="email" data-translate="contact.form.emailLabel">Email:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="subject">Subject:</label>
+                    <label for="subject" data-translate="contact.form.subjectLabel">Subject:</label>
                     <input type="text" id="subject" name="subject" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Message:</label>
+                    <label for="message" data-translate="contact.form.messageLabel">Message:</label>
                     <textarea id="message" name="message" rows="6" required></textarea>
                 </div>
                 <div class="g-recaptcha"
@@ -69,14 +72,14 @@
                      data-callback="recaptchaCallback"
                      data-expired-callback="recaptchaExpiredCallback"></div>
                 <br/>
-                <button type="submit" class="button" id="submit-button">Send Message</button>
+                <button type="submit" class="button" id="submit-button" data-translate="contact.form.submitButton">Send Message</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Control and Telemetry Systems. All rights reserved.</p>
-        <p>Contact: <a href="mailto:contact@ljost.com">contact@ljost.com</a></p>
+        <p data-translate="footer.copyright">&copy; 2025 Control and Telemetry Systems. All rights reserved.</p>
+        <p data-translate="footer.contact">Contact: <a href="mailto:contact@ljost.com">contact@ljost.com</a></p>
     </footer>
 
     <script>
@@ -120,5 +123,6 @@
              }
         };
     </script>
+    <script src="translate.js" defer></script> <!-- Added translation script -->
 </body>
 </html>
