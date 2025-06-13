@@ -24,7 +24,7 @@
                rel="alternate"
                hreflang="x-default"
                href="https://ljost.com/index.html"/>
-    <lastmod>2025-04-22</lastmod> <!-- Assuming today's date for modification -->
+    <lastmod>2025-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -51,7 +51,7 @@
                rel="alternate"
                hreflang="x-default"
                href="https://ljost.com/about.html"/>
-    <lastmod>2025-04-22</lastmod>
+    <lastmod>2025-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
